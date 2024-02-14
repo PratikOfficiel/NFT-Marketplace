@@ -19,7 +19,18 @@
   "dependencies": {
     "@dfinity/agent": "^0.21.4",
     "@dfinity/candid": "^0.21.4",
-    "@dfinity/principal": "^0.21.4"
+    "@dfinity/principal": "^0.21.4",
+    "bootstrap": "^5.3.2",
+    "css-loader": "^6.10.0",
+    "lit-html": "^3.1.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.50.1",
+    "react-router-dom": "^6.22.0",
+    "style-loader": "^3.3.4",
+    "svg-url-loader": "^8.0.0",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "assert": "2.0.0",
@@ -31,6 +42,8 @@
     "process": "0.11.10",
     "stream-browserify": "3.0.0",
     "terser-webpack-plugin": "^5.3.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
     "util": "0.12.4",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
