@@ -1,19 +1,4 @@
-Copyright 2022 London App Brewery LTD (www.appbrewery.com)
 
-The code in this tutorial project is licended under the Apache License, Version 2.0 (the "License");
-you may not use this project except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-Here is the TL;DR version of the above licence:
-https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)
 
 # To Install and Run the Project
 
@@ -39,63 +24,6 @@ dfx deploy --argument='("CryptoDunks #123", principal "pi5o3-jslsz-5s7we-rf4ke-h
 
 http://localhost:8080/
 
-# Minter Else HTML
-
-```
- <div className="minter-container">
-        <h3 className="Typography-root makeStyles-title-99 Typography-h3 form-Typography-gutterBottom">
-          Minted!
-        </h3>
-        <div className="horizontal-center">
-        </div>
-      </div>
-
-```
-
-# Loader HTML
-
-```
-<div className="lds-ellipsis">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-```
-
-# Button HTML
-
-```
-<div className="Chip-root makeStyles-chipBlue-108 Chip-clickable">
-            <span
-              onClick={}
-              className="form-Chip-label"
-            >
-              Sell
-            </span>
-            </div>
-```
-
-# Price Input HTML
-
-```
-<input
-        placeholder="Price in DANG"
-        type="number"
-        className="price-input"
-        value={}
-        onChange={}
-      />
-```
-
-# Price Label HTML
-
-```
-<div className="disButtonBase-root disChip-root makeStyles-price-23 disChip-outlined">
-          <span className="disChip-label">23 DANG</span>
-        </div>
-```
-
 # Creating NFT for Testing
 
 1. Mint an NFT on the command line to get NFT into mapOfNFTs:
@@ -107,7 +35,7 @@ dfx canister call opend_backend mint '(vec {137; 80; 78; 71; 13; 10; 26; 10; 0; 
 2. List the item into mapOfListings:
 
 ```
-dfx canister call opend_backend listItem '(principal "gf4a7-g4aaa-aaaaa-qaarq-cai", 2156)'
+dfx canister call opend_backend listItem '(principal "{canister_id_from_step_1", 2156)'
 ```
 
 3. Get OpenD canister ID:
@@ -119,7 +47,7 @@ dfx canister id opend_backend
 4. Transfer NFT to OpenD:
 
 ```
-dfx canister call gf4a7-g4aaa-aaaaa-qaarq-cai transferOwnership '(principal "a4tbr-q4aaa-aaaaa-qaafq-cai", true)'
+dfx canister call {canister_id_from_Step_1} transferOwnership '(principal "{canister_id_from_step_3}", true)'
 ```
 
 # Conneting to the Token Canister
