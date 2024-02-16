@@ -9,8 +9,8 @@ function Gallery() {
   const [userOwnedGallery, setUserOwnedGallery] = useState([]);
 
   async function getNFTs() {
+
     const userNFTs = await opend.getOwnedNFTs(CURRENT_USER_ID);
-    console.log(userNFTs);
     setUserOwnedGallery(userNFTs);
   }
 
@@ -24,9 +24,8 @@ function Gallery() {
       <div className="disGrid-root disGrid-container disGrid-spacing-xs-2">
         <div className="disGrid-root disGrid-item disGrid-grid-xs-12">
           <div className="disGrid-root disGrid-container disGrid-spacing-xs-5 disGrid-justify-content-xs-center">
-          {userOwnedGallery.map((item) => (<Item key={item.toText()} id={item} />))}
+          {userOwnedGallery.map((item) => (<Item key={item.toText()} id={item} role="collection"/>))}
           </div>
-  {/*<Item id='ahw5u-keaaa-aaaaa-qaaha-cai'/>*/}
         </div>
       </div>
     </div>
